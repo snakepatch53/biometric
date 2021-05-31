@@ -1,0 +1,10 @@
+{
+    "name": "biometric",
+    "root": "http://193.145.110.2/biometric/",
+    "root_alternative": "http://164.163.50.209/biometric/",
+    "octeto_local": "193.145.110.",
+    "db_host": "193.145.110.2",
+    "db_user": "root",
+    "db_pass": "while(!vida)",
+    "db_name": "biometric"
+}
