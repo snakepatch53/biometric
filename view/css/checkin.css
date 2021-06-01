@@ -1,0 +1,159 @@
+@font-face {
+    src: url('../font/Ubuntu-C.ttf');
+    font-family: Ubuntu-C;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    background: #263238;
+}
+
+section.error,
+section.checkin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 0;
+    max-height: 0;
+    max-width: 400px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0s ease;
+}
+
+section.error *:not(i) {
+    user-select: text;
+}
+
+section.checkin *:not(i) {
+    font-family: Ubuntu-C;
+}
+
+section.checkin .img_foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    transition: all 0s ease;
+    margin: 20px 0;
+}
+
+section.checkin .img_foto.foto img {
+    display: block;
+}
+
+section.checkin .img_foto.foto i {
+    display: none;
+}
+
+section.checkin img {
+    height: 100%;
+    display: none;
+}
+
+section.error i,
+section.checkin i {
+    display: block;
+    font-size: 100px;
+    color: #fff;
+}
+
+section.error i {
+    margin: 20px 0;
+}
+
+section.error h1,
+section.checkin h1 {
+    width: 100%;
+    max-width: 400px;
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+section.checkin p {
+    min-height: 100px;
+    font-size: 18px;
+    text-align: center;
+    color: var(--info);
+    transition: all 0s;
+}
+
+section.checkin p * {
+    font-family: sans-serif;
+}
+
+section.checkin p h2 {
+    font-weight: normal;
+    font-size: 40px;
+}
+
+section.checkin p h2 b {
+    font-weight: bold;
+}
+
+section.checkin p h2 span {
+    margin: 0 0 0 5px;
+    color: var(--info);
+}
+
+.mode {
+    display: none;
+}
+
+.mode.error ~ section.error,
+section.checkin {
+    width: 100%;
+    max-height: 100%;
+    opacity: 1;
+    transition: all 0s ease;
+}
+
+.mode.error ~ section.checkin {
+    width: 0;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0s ease;
+}
+
+section.error p {
+    text-align: center;
+    color: var(--error);
+    font-size: 17px;
+}
+
+section.error ol {
+    text-align: left;
+    color: #fff;
+}
+
+section.error ol {
+    margin-top: 20px;
+}
+
+section.error ol li {
+    margin-left: 20px;
+    line-height: 15px;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+section.error ol li a {
+    color: var(--info);
+    text-decoration: none;
+}
+
+section.error ol li a:hover {
+    text-decoration: underline;
+}
+
+section.error i {
+    color: var(--error);
+}

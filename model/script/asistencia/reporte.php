@@ -6,6 +6,10 @@ include('../../dao/Mysql.php');
 include('../../vendor/autoload.php');
 $mpdf = new \Mpdf\Mpdf(['en-GB-x', 'A4', '', '', 0, 0, 0, 0, 0, 0]);
 
+include('../../dao/InformacionDao.php');
+$informacionDao = new InformacionDao();
+$informacion_r = mysqli_fetch_assoc($informacionDao->select());
+
 include('../../dao/UsuarioDao.php');
 $usuarioDao = new UsuarioDao();
 $usuario_rs = $usuarioDao->select();
@@ -23,10 +27,10 @@ if (isset(
     $fecha_hasta = $_GET['reporte_hasta'];
     $usuario_rs = getUsers($usuario_rs);
     $tittle = 'Reporte de asistencia ';
-    if($fecha_desde != "") {
+    if ($fecha_desde != "") {
         $tittle .= " Desde " . $fecha_desde;
     }
-    if($fecha_hasta != "") {
+    if ($fecha_hasta != "") {
         $tittle .= " Hasta " . $fecha_hasta;
     }
     $html = '
@@ -45,7 +49,16 @@ if (isset(
                 </style>
             </head>
             <body>
-                <h1 style="text-align: center; font-family: sans-serif; font-size: 16px;">' . $tittle . '</h1>
+                <table style="width: 100%;" border=0>
+                    <tr>
+                        <td style="width:60px;">
+                            <img style="width:60px;max-width:100%;" src="../../../view/file/informacion_logo/' . $informacion_r['informacion_logo'] . '" alt="Logo" >
+                        </td>
+                        <td style="text-align: center;">
+                            <h1 style="text-align: center; font-family: sans-serif; font-size: 16px;">' . $tittle . '</h1>
+                        </td>
+                    </tr>
+                </table>
     ';
     foreach ($usuario_rs as $usuario_index => $usuario_value) {
         $asistencia_array = getAsistencias($asistencia_rs, $usuario_value, $fecha_desde, $fecha_hasta);

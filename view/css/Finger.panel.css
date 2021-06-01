@@ -1,0 +1,161 @@
+.finger-window {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 0;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    opacity: 0;    
+}
+
+.finger-window.open {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.finger-window .window {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    border-radius: 2px;
+}
+
+.finger-window .window .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    background: var(--secondary_background);
+    color: var(--secondary_color);
+    font-size: 17px;
+    letter-spacing: 0.5px;
+}
+
+.finger-window .window .head i {
+    margin-right: 5px;
+}
+
+.finger-window .window .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.finger-window .window .content .row {
+    display: flex;
+    width: 100%;
+    height: auto;
+    font-size: 17px;
+}
+
+.finger-window .window .content a {
+    text-decoration: none;
+    color: var(--info);
+}
+
+.finger-window .window .content a:hover {
+    text-decoration: underline;
+}
+
+.finger-window .window .content .row img {
+    width: 100%;
+    max-width: 50px;
+    margin: auto;
+}
+
+.finger-window .window .content .row span {
+    margin: 0 0 0 5px;
+}
+
+.finger-window .window .content .row i {
+    font-size: 100px;
+    margin: 0 auto;
+    margin-top: 20px;
+    color: var(--primary_background);
+}
+
+.finger-window .window .content .row i.ini {
+    color: var(--primary_background);
+}
+
+.finger-window .window .content .row i.success {
+    color: var(--success);
+}
+
+.finger-window .window .content .row i.error {
+    color: var(--error);
+}
+
+.finger-window .window .content p.row.description {
+    font-size: 20px;
+    margin: 20px 0;
+    color: var(--info);
+    font-weight: normal;
+}
+
+.finger-window .window .content p.row.aviso {
+    font-size: 17px;
+    color: var(--error);
+    letter-spacing: 0.5px;
+}
+
+.finger-window .window .content p.row.contador b {
+    color: var(--info);
+    margin: 0 0 0 10px;
+    font-size: 40px;
+    line-height: 37px;
+}
+
+.finger-window .window .content ol {
+    padding-left: 20px;
+}
+
+.finger-window .window .content ol * {
+    user-select: text;
+}
+
+.finger-window .window .content p.row {
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #292D3E;
+    font-weight: bold;
+}
+
+.finger-window .window .content .row {}
+
+.finger-window .window {}
+
+.finger-window .window .buttons {
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.finger-window .window .buttons button {
+    width: 105px;
+    height: 35px;
+    margin: 0 auto;
+    justify-content: center;
+    background: #DD4F43;
+    color: #fff;
+}
+
+.finger-window .window .buttons button span {
+    margin: 0 0 0 3px;
+}

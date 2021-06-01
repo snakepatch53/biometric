@@ -1,0 +1,100 @@
+page section.head h3 {
+    font-size: 18px;
+    color: var(--tertiary_color);
+}
+
+page section.head button {
+    background: #00A65A;
+    color: #ffffff;
+}
+
+page section.head .ideabutton.delete {}
+
+page section.head .report {
+    background: #4f7d8b;
+}
+
+page section.head .search {
+    flex-grow: 1;
+    /*  max-width: 500px;*/
+    color: var(--tertiary_color);
+}
+
+
+
+/*BUtton table*/
+.ideatable table tr th:last-child,
+.ideatable table tr td:last-child {
+    width: 145px;
+}
+
+.ideabutton.edit,
+.ideabutton.delete {
+    margin: auto;
+    width: 70px;
+    color: #ffffff;
+}
+
+.ideabutton.delete {
+    background: #DC3144;
+}
+
+
+.ideabutton.edit {
+    background: #037BFD;
+}
+
+
+.td-span.state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 52px;
+    height: 27px;
+    font-size: 12.5px !important;
+    color: #ffffff !important;
+    background: #dda200;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    margin: auto;
+}
+
+.td-span.state.active {
+    background: #1BA160;
+}
+
+.td-action .buttons-flex {
+    width: 215px;
+}
+
+.td-action .buttons-flex .finger {
+    background: #282C3D;
+    color: #fff;
+    width: 68px;
+}
+
+.td-action .buttons-flex .edit {
+    margin: 0 3px;
+}
+
+.td-action .buttons-flex .delete {
+    margin: 0;
+}
+
+.td-action .buttons-flex .finger i {
+    font-size: 14px;
+    margin-right: 3px;
+}
+
+
+
+form .campo .inputpass .showpass .show,
+form .campo .inputpass .showpass.show .hide {
+    display: block;
+}
+
+form .campo .inputpass .showpass .hide,
+form .campo .inputpass .showpass.show .show {
+    display: none;
+}

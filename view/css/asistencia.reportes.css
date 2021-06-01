@@ -1,0 +1,121 @@
+.navigate-reportes {}
+
+.navigate-reportes .ideasection {
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-gap: 10px;
+    margin-top: 15px;
+}
+
+.navigate-reportes .ideasection .search,
+.navigate-reportes .ideasection button {
+    width: 100%;
+}
+
+.navigate-reportes .ideasection .search input {
+    width: 100%;
+    height: 100%;
+}
+
+
+.navigate-reportes .ideasection button.ideabutton.generar {
+    background: #00A65A;
+    color: #fff;
+}
+
+.navigate-reportes .ideasection button.ideabutton span {
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.navigate-reportes .ideasection button.ideabutton i {
+    font-size: 13px;
+}
+
+.navigate-reportes .ideasection button.ideabutton.marcar,
+.navigate-reportes .ideasection button.ideabutton.desmarcar {
+    background: transparent;
+    color: #000;
+    box-shadow: unset;
+    transition: all 0.1s ease;
+    justify-content: flex-end;
+}
+
+.navigate-reportes .ideasection button.ideabutton.marcar:hover,
+.navigate-reportes .ideasection button.ideabutton.desmarcar:hover {
+    color: var(--info);
+    transition: all 0.1s ease;
+}
+
+@media (max-width: 1200px) {
+
+    .navigate-reportes .ideasection.generar-form {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .navigate-reportes .ideasection {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .navigate-reportes .ideasection.generar-form {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    .navigate-reportes .ideasection b {
+        display: none;
+    }
+
+}
+
+.navigate-reportes table tbody tr {
+    height: auto;
+}
+
+.navigate-reportes table tbody tr td .td-span,
+.navigate-reportes table tbody tr td .td-action {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 10px 5px;
+}
+
+.navigate-reportes table tbody tr td .td-action input {
+    position: relative;
+    width: 15px;
+    height: 15px;
+}
+
+.navigate-reportes table tbody tr td .td-action input:before,
+.navigate-reportes table tbody tr td .td-action input:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.navigate-reportes table tbody tr td .td-action input:before {
+    background: #fff;
+    border: solid 1px #000000;
+}
+
+.navigate-reportes table tbody tr td .td-action input:after {
+    background-image: url(../icon/check_false.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    top: 40%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.navigate-reportes table tbody tr td .td-action input:checked:after {
+    background-image: url(../icon/check_true.png);
+    top: 30%;
+    left: 80%;
+}
